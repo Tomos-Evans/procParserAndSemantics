@@ -1,4 +1,4 @@
-# Proc Parser and Natural Smantics
+# Proc Parser and Natural Semantics
 
 A Parser and Natural Semantics for the basic imperitive programming language, `Proc`.
 Proc is a basic imperative programming that is proposed and defined in "Semantics with Applications, by H.R. Nielson and F. Nielson".
