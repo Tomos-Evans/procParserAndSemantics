@@ -287,3 +287,11 @@ stmComp = makeExprParser stm' stmOperatorTable
 -- TODO Document
 stm :: Parser Stm
 stm = whitespace *> stmComp
+
+
+
+-- The function that calls the parser
+parse :: String -> Stm
+parse input = case parseMaybe stm input of
+    Just statement  -> statement
+    Nothing         -> error "Did not Parse"
