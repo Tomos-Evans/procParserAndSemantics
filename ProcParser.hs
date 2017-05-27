@@ -1,6 +1,6 @@
 module ProcParser where
 
-import Text.Megaparsec hiding (token)
+import Text.Megaparsec hiding (token, parse)
 import Text.Megaparsec.String
 import Text.Megaparsec.Expr
 import qualified Text.Megaparsec.Lexer as Lexer
@@ -288,10 +288,3 @@ stmComp = makeExprParser stm' stmOperatorTable
 stm :: Parser Stm
 stm = whitespace *> stmComp
 
-
-
--- The function that calls the parser
-parse :: String -> Stm
-parse input = case parseMaybe stm input of
-    Just statement  -> statement
-    Nothing         -> error "Did not Parse"
