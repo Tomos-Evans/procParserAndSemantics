@@ -22,4 +22,8 @@ cabal sandbox init
  
  
  
+ ## Static Evaluation
+ 
+You may notice that the static evaluation of the Proc Language currently fails some of its tests! I know what the problem is, just waiting for the time to finnish off some functions. The Static elvaluation is logically seperate from the Dynamic and Mixed evaluations, so those two should be fine!
+ 
  
